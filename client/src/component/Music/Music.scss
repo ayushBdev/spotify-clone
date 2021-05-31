@@ -1,0 +1,33 @@
+.music {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    img {
+        width: 6vw;
+        height: 12vh;
+        border-radius: 5px;
+    }
+    p {
+        font-size: 14px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left: 10px;
+    }
+}
+
+.player {
+
+}   

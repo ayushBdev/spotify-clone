@@ -1,0 +1,46 @@
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+}
+
+.main_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar_div {
+  width: 16vw;
+  height: 100%;
+}
+
+.container_div {
+  width: 84vw;
+  height: 100%;
+}
+
+.navbar_div {
+  width: 100%;
+  height: 9vh;
+}
+
+.menu_div {
+  width: 100%;
+  height: 77vh;
+}
+
+.music_options {
+  width: 100%;
+  height: 14vh;
+}
+/*# sourceMappingURL=Home.css.map */

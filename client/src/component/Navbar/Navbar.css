@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px 20px;
+  background-color: #181818;
+}
+
+.left_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+}
+
+.left_menu .MuiSvgIcon-root {
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.right_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 160px;
+  padding: 2px;
+  border-radius: 999px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.right_menu:hover {
+  background-color: #333333;
+}
+
+.right_menu p {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.right_menu .MuiAvatar-root {
+  width: 25px;
+  height: 25px;
+  background-color: #2e2e2e;
+}
+
+.right_menu .MuiSvgIcon-root {
+  color: white;
+}
+/*# sourceMappingURL=Navbar.css.map */

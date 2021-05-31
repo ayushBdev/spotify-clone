@@ -1,0 +1,243 @@
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: #B3B3B3;
+  font-size: 14px;
+  padding: 15px 5px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.sidebar_divs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.app_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.app_logo img {
+  width: 40px;
+}
+
+.app_logo p {
+  margin-left: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.sidebar_menu1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 25px;
+}
+
+.sidebar_menu1 div, .sidebar_menu1 .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #7F7F7F;
+}
+
+.sidebar_menu1 div p, .sidebar_menu1 .link p {
+  margin-left: 10px;
+}
+
+.sidebar_menu1 div:hover, .sidebar_menu1 .link:hover {
+  background-color: #282828;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar_menu2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+}
+
+.sidebar_menu2 div, .sidebar_menu2 .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #7F7F7F;
+}
+
+.sidebar_menu2 div p, .sidebar_menu2 .link p {
+  margin-left: 10px;
+}
+
+.sidebar_menu2 div:hover, .sidebar_menu2 .link:hover {
+  background-color: #282828;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar_menu2 div:hover .MuiSvgIcon-root, .sidebar_menu2 .link:hover .MuiSvgIcon-root {
+  background-color: #3B1BA9;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar_menu2 .MuiSvgIcon-root {
+  padding: 4px;
+  border-radius: 1px;
+  background-color: #7F7F7F;
+  color: white;
+}
+
+.app_ins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.app_ins p {
+  margin-left: 6px;
+}
+
+.app_ins .MuiSvgIcon-root {
+  padding: 2px;
+  border: 1px solid #B3B3B3;
+  border-radius: 50%;
+}
+
+.app_ins:hover {
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.app_ins:hover .MuiSvgIcon-root {
+  border: 1px solid white;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #282828;
+  color: white;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.selected {
+  background-color: #282828;
+  color: white;
+}
+
+.selected p {
+  color: white;
+}
+
+.links {
+  text-decoration: none;
+}
+/*# sourceMappingURL=Sidebar.css.map */
