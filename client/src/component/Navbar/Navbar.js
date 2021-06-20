@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { Avatar } from '@material-ui/core';
-import * as actionType from "../#Redux/Types/Types";
+
+import { LOGOUT } from "../#Redux/Types/Types";
 
 import decode from "jwt-decode";
-import { useSelector, useDispatch } from "react-redux";
-import { useHistory, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useHistory, useLocation, Link } from "react-router-dom";
 
 
 const Navbar = () => {
 
-    const users = useSelector(state => state.AuthReducer);
-
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")) || users);
-    console.log(user);
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
     const dispatch = useDispatch();
     const location = useLocation();
@@ -24,9 +23,9 @@ const Navbar = () => {
 
     const logout = () => {
         dispatch({
-            type: actionType.LOGOUT
+            type: LOGOUT
         });
-        history.push("/auth");
+        history.push("/");
         setUser(null);
     };
 
@@ -50,8 +49,12 @@ const Navbar = () => {
             </div>
             <div className="right_menu">
                 <Avatar/>
-                <p> {user?.result.name} </p>
-                <ExitToAppIcon onClick={logout}/>
+                {user ? (<>
+                    <p> {user?.result.name} </p>
+                    <ExitToAppIcon onClick={logout}/>
+                </>) : (
+                    <Link to="/auth" className="auth_link"> Sign Up </Link>
+                )}
             </div>
         </div>
     );

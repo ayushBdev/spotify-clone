@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
+
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import Menu from "../Menu/Menu";
 import Playlist from "../Playlist/Playlist";
 import Music from "../Music/Music";
-import Auth from "../Authentication/Auth";
+import { SWITCH } from "../#Redux/Types/Types";
+import { danger } from "../Notifications/Notifications";
+import API from "../#Api/Api";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
 
@@ -15,11 +19,21 @@ const Home = () => {
 
     const alter = useSelector(state => state.Switch);
 
-    if (!user) {
-        return (
-            <Auth/>
-        )
-    }
+    const history = useHistory();
+    const dispatch = useDispatch();
+
+    const handelPush = () => {
+        history.push("/auth");
+        danger("Login or SignUp to see playlist");
+        dispatch({
+            type: SWITCH,
+            payload: false
+        });
+    };
+
+    useEffect(() => {
+        API.get("./test");
+    }, []);
 
     return (
         <div className="home">
@@ -33,7 +47,11 @@ const Home = () => {
                         <Navbar/>
                     </div>
                     <div className="menu_div">
-                        {alter ? <Playlist/> : <Menu/>}
+                        {alter ? (
+                            user!==null ? <Playlist/> : handelPush()
+                        ) : (
+                            <Menu/>
+                        )}
                     </div>
                 </div>
             </div>

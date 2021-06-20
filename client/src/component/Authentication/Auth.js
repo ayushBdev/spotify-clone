@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import "./Auth.css";
-import logo from "../#Images/logo.jpg";
+
+import { logo } from "../Images/Images";
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 
 import { signup, signin } from "../#Redux/Actions/Auth_Action";
+
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { wrongPassword } from "../Notifications/Notifications";
+import { useHistory, Link } from "react-router-dom";
+import { danger } from "../Notifications/Notifications";
+
+import Loader from "react-loader-spinner";
 
 const Auth = () => {
 
@@ -21,19 +25,22 @@ const Auth = () => {
     const [form, setForm] = useState(initialState);
     const [isSignup, setIsSignup] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
+    const [showLoader, setShowLoader] = useState(false);
 
     const dispatch = useDispatch();
     const history = useHistory();
 
     const handelSubmit = (event) => {
         event.preventDefault();
+        setShowLoader(true);
         if(isSignup) {
             dispatch(signin(form, history));
         } else {
             if(form.password === form.confirmPassword) {
                 dispatch(signup(form, history));
             } else {
-                wrongPassword();
+                danger("Password Mismatch");
+                setShowLoader(false);
             }
         }
         setForm(initialState);
@@ -55,9 +62,9 @@ const Auth = () => {
 
     return(
         <div className="auth">
-            <div className="logo">
-                <img src={logo}/>
-            </div>
+            <Link to="/" className="logo">
+                <img src={logo} alt=""/>
+            </Link>
             <form className="auth_form" onSubmit={handelSubmit}>
                 {isSignup ? null : (
                     <div>
@@ -107,6 +114,14 @@ const Auth = () => {
             <div className="switch_btn" onClick={switchMode}>
                 {isSignup ? "Don't have a account. Sign Up" : "Already have a account? Log In"}
             </div>
+            <Loader
+                type="TailSpin"
+                color="#00BFFF"
+                height={50}
+                width={50}
+                timeout={5000000000}
+                visible={showLoader}
+            />
         </div>
     );
 };

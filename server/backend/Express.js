@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import bodyparser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-dotenv.config({path: "./.env"});
+dotenv.config();
 
 import authRouter from "./Routes/Auth_Routes.js";
 import musicRouter from "./Routes/Music_Route.js";
@@ -22,7 +22,7 @@ app.use("/playlist", playlistRouter);
 const ATLAS = process.env.ATLAS;
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(ATLAS, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(ATLAS, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
     .then(() => app.listen(PORT, () => console.log(`Server is running at Port: ${PORT}`)))
     .catch((err) => console.log(`${err} did not connected`));
 

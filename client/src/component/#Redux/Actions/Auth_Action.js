@@ -1,5 +1,6 @@
 import * as api from "../../#Api/Api";
 import { AUTH } from "../Types/Types";
+import { success } from "../../Notifications/Notifications";
 
 export const signin = (formData,router) => async(dispatch) => {
     try{
@@ -8,6 +9,7 @@ export const signin = (formData,router) => async(dispatch) => {
             type: AUTH,
             payload: data
         });
+        success(`Welcome ${data?.result.name}`);
         router.push("/");
     }catch(err){
         console.log(err);
@@ -22,6 +24,7 @@ export const signup = (formData,router) => async(dispatch) => {
             type: AUTH,
             payload: data
         });
+        success(`Welcome ${data?.result.name}`);
         router.push("/");
     }catch(err){
         console.log(err);

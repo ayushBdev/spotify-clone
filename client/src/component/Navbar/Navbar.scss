@@ -31,7 +31,6 @@
     justify-content: space-between;
     align-items: center;
     width: fit-content;
-    min-width: 160px;
     padding: 2px;
     border-radius: 999px;
     background-color: black;
@@ -45,6 +44,7 @@
         font-size: 14px;
         letter-spacing: 1px;
         font-family: 'Open Sans', sans-serif;
+        margin: 0px 10px;
     }
     .MuiAvatar-root {
         width: 25px;
@@ -54,4 +54,14 @@
     .MuiSvgIcon-root {
         color: white;
     }
+}
+
+.auth_link {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
 }

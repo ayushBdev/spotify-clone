@@ -1,9 +1,9 @@
 import * as api from "../../#Api/Api";
 import { CREATE_PLAYLIST, FETCH_PLAYLIST, DELETE_PLAYLIST } from "../Types/Types";
 
-export const getPlaylist = () => async(dispatch) => {
+export const getPlaylist = (id) => async(dispatch) => {
     try{
-        const { data } = await api.fetchPlaylist();
+        const { data } = await api.fetchPlaylist(id);
         dispatch({
             type: FETCH_PLAYLIST,
             payload: data
@@ -13,9 +13,9 @@ export const getPlaylist = () => async(dispatch) => {
     }
 };
 
-export const createPlaylist = (datas) => async(dispatch) => {
+export const createPlaylist = (id, datas) => async(dispatch) => {
     try{
-        const { data } = await api.createPlaylist(datas);
+        const { data } = await api.createPlaylist(id, datas);
         dispatch({
             type: CREATE_PLAYLIST,
             payload: data
@@ -25,9 +25,9 @@ export const createPlaylist = (datas) => async(dispatch) => {
     }
 };
 
-export const deletesPlaylist = (id) => async(dispatch) => {
+export const deletesPlaylist = (id,musicId) => async(dispatch) => {
     try{
-        const { data } = await api.deletePlaylist(id);
+        const { data } = await api.deletePlaylist(id,musicId);
         dispatch({
             type: DELETE_PLAYLIST,
             payload: data

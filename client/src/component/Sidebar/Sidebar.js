@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
+
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import AddIcon from '@material-ui/icons/Add';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import logo2 from "../#Images/logo2.png";
+import { logo2 } from "../Images/Images";
+
+import { SWITCH } from "../#Redux/Types/Types";
 
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { SWITCH } from "../#Redux/Types/Types";
 
 const Sidebar = () => {
 
@@ -38,7 +40,7 @@ const Sidebar = () => {
             <div className="sidebar_divs">
                 <Link to="/" className="links">
                     <div className="app_logo" onClick={handelClick}> 
-                        <img src={logo2}/>
+                        <img src={logo2} alt=""/>
                         <p> Spotify </p>
                     </div>
                 </Link>

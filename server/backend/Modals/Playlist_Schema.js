@@ -5,14 +5,10 @@ const playlistSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    musicId: {
-        type: String,
-        require: true
-    },
-    uploadDate: {
-        type: String,
-        require: true
-    }
+    data: [{
+        musicId: { type: String },
+        uploadDate: { type: String }
+    }],
 });
 
 export default mongoose.model("Playlist", playlistSchema);

@@ -103,6 +103,7 @@
   border-radius: 5px;
   cursor: pointer;
   color: #7F7F7F;
+  margin-top: 2px;
 }
 
 .sidebar_menu1 div p, .sidebar_menu1 .link p {
@@ -234,6 +235,10 @@
 }
 
 .selected p {
+  color: white;
+}
+
+.selected .MuiSvgIcon-root {
   color: white;
 }
 

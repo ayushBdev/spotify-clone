@@ -1,0 +1,81 @@
+@mixin flex ($a,$b,$c) {
+    display: flex;
+    flex-direction: $a;
+    justify-content: $b;
+    align-items: $c;
+}
+
+.auth {
+    @include flex(column,space-around,center);
+    width: 100vw;
+    height: 100vh;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.logo {
+    img{
+        width: 400px;
+    }
+}
+
+.auth_form {
+    @include flex(column,center,flex-start);
+    width: 300px;
+    height: fit-content;
+    input{
+        @include flex(row,center,center);
+        width: 100%;
+        border: none;
+        outline: none;
+        letter-spacing: 0.5px;
+        padding: 4px 6px;
+        font-size: 15px;
+        border-radius: 5px;
+        &::placeholder {
+            font-size: 14px;
+            color: gray;
+        }
+    }
+    div{
+        @include flex(row,space-between,center);
+        width: 100%;
+        height: 100%;
+        padding: 2px 10px;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+    }
+    .MuiSvgIcon-root {
+        cursor: pointer;
+    }
+}
+
+.auth_btn {
+    @include flex(row,center,center);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 80px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    background-color: #20D662;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.switch_btn {
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #20D662;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}

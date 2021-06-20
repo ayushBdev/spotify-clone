@@ -15,6 +15,8 @@ export const createMusic = (newMusic) => API.post("/music", newMusic);
 export const signIn = (formData) => API.post("/auth/signin", formData);
 export const signUp = (formData) => API.post("/auth/signup", formData);
 
-export const fetchPlaylist= () => API.get("/playlist");
-export const createPlaylist = (data) => API.post("/playlist", data);
-export const deletePlaylist = (id) => API.delete(`/playlist/${id}`);
+export const fetchPlaylist= (id) => API.get(`/playlist/${id}`);
+export const createPlaylist = (id,data) => API.patch(`/playlist/create/${id}`, data);
+export const deletePlaylist = (id,data) => API.patch(`/playlist/delete/${id}`, data);
+
+export default API;

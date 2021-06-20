@@ -1,5 +1,4 @@
 import express from "express";
-import async from "async";
 import Music from "../Modals/Music_Schema.js";
 
 const router = express.Router();
